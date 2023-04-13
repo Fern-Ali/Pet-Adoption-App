@@ -98,7 +98,8 @@ def list_specific_pet(id):
 def edit_specified_pet(id):
     """Edit user details, based on user ID."""
     specified_pet = Pet.query.filter_by(id=id).all()
-    form = addPetForm()
+    specified_pet1 = Pet.query.get_or_404(id)
+    form = addPetForm(obj=specified_pet1)
     name=specified_pet[0].name
     if request.method == 'POST':
         
