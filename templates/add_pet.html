@@ -1,7 +1,7 @@
 ﻿{% extends 'base.html' %}
 {% block add_card%}
 
-<form id="addPetForm" method="POST" action="/add" class="test p-4 rounded shadow-lg mt-3" style="border: 4px solid rgba(243, 101, 219, 0.28);">
+<form id="addPetForm" method="POST" action="/add" class=" p-4 rounded shadow-lg mt-3" style="border: 4px solid rgba(243, 101, 219, 0.28); background-color: rgba(239, 226, 192, 0.8);">
     <h4 class="text-center font-weight-bold text-dark mb-3">Add a New Pet to Adopt!</h4>
     {{ form.hidden_tag() }} <!--add type=hidden form fields -->
     {% for field in form

@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://kit.fontawesome.com/8b28226415.js" crossorigin="anonymous"></script>
-    <title></title>
+    <title>Adoption Agency by Fern-Ali</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">Boggle!</a>
+    <nav class="navbar navbar-dark rounded navbar-expand-lg fixed-top" style="background-color: rgba(98, 176, 184, 0.8); ">
+        <a class="navbar-brand" href="#">Adoption Agency!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +28,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {% block dropdown_link_description %} Other Projects {% endblock %}
+                        {% block dropdown_link_description %} <i class="fa-brands fa-github fa-beat" style="color: white;"></i> Fern-Ali {% endblock %}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href={% block dropdown_link_1 %}#{% endblock %}>{% block dropdown_desc_1 %} link1 {% endblock %}</a>
@@ -43,17 +43,59 @@
 
 
     <div class="container mt-5">
+
         <div class="row justify-content-center">
-        <main id="flash_messages" class="">
-
-            <section class="messages">
-                {% for category,msg in get_flashed_messages(with_categories=true)%}
-                <p class="{{category}} display" id="flash_msg">{{msg}}</p>
-                {% endfor %}
-            </section>
-
-        </main>
+            <div class="col-4 round shadow mb-3" style="background-color: lightgray;">
+                <!--<h2 class="mt-2  text-center text-light " > Adoption Agency </h2>-->
             </div>
+            
+
+        </div>
+        <div class="row justify-content-center mb-4 mt-3 ">
+            
+            <div class="col-2 shadow-lg round p-2" style="background-color: rgba(98, 176, 184, 0.4); border: 3px solid lightyellow; ">
+                <div class="row justify-content-center">
+                    <div class="row justify-content-center mt-1 mb-1 ">
+
+                        <div id="icon_holder" class="col round shadow" style="background-color: rgba(239, 226, 192, 0.8)">
+                            <div class="row justify-content-center">
+                                <i title="Fern-Ali's Github" id="" class="github-icon fa-brands fa-github m-2 options-icons pt-2 pb-2" style="color: darkmagenta;"></i>
+                                <i title="Project Repository"class="project-icon notes-icon fa-solid fa-clipboard m-2 options-icons pt-2 pb-2 " style="color: #e029c8;"></i>
+                                <i title="Donate to Creator!"class="bday-icon fa-solid fa-sack-dollar m-2 options-icons pt-2 pb-2" style="color: darkmagenta;"></i>
+                                <i title="Requirements.txt"class="reqs-icon fa-solid fa-pen-to-square m-2 options-icons pt-2 pb-2" style="color: #e029c8;"></i>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!--<div class="col-6">-->
+                        <!--<i><h5 class="mt-2 text-center text-light"> Make your home a little fuzzier  </h5> </i>-->
+                    <!--</div>-->
+                    
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <div class="row justify-content-center">
+
+            <main id="flash_messages" class="">
+
+                <section class="messages">
+                    {% for category,msg in get_flashed_messages(with_categories=true)%}
+                    <p class="{{category}} display" id="flash_msg">{{msg}}</p>
+                    {% endfor %}
+                </section>
+
+
+
+            </main>
+        </div>
         <div class="row justify-content-center">
 
             {% block add_card %}
@@ -68,6 +110,20 @@
             {% endblock %}
 
 
+        </div>
+
+        <div class="notification pl-5 pr-5 shadow" style="border: 4px solid rgba(243, 101, 219, 0.28);">
+
+            <div class="row justify-content-center">
+
+
+                <div class="col rounded shadow  ">
+                    <a href="https://github.com/Fern-Ali" class=" btn btn-success shadow rounded border border-light" style="font-weight: 600;"><i class="fa-brands fa-github fa-lg fa-beat" style="color: white;"></i> Fern-Ali ! </a>
+                </div>
+
+
+            </div>
+            <span class="notification_progress shadow">  </span>
         </div>
     </div>
 

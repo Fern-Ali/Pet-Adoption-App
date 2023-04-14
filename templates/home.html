@@ -7,11 +7,11 @@
 
 
 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 card-group  mt-4">
-    <div class="card round test" style="border: 3px solid rgba(243, 101, 219, 0.28);">
+    <div class="card round " style="border: 3px solid rgba(243, 101, 219, 0.98); background-color: rgba(239, 226, 192, 0.5)">
         <img src={{pet.photo_url}} class="card-img-top shadow round p-2" style="border: 4px solid rgba(243, 101, 219, 0.28); background-color: lightyellow; " /> <!--style="border: 3px solid tan; background-color: rgba(243, 106, 101, 0.28);"  alt="..."-->
         <div class="card-body round">
             <div class=" p-3 colorme shadow">
-                <h5 class="card-title text-center text-primary"> {{pet.name}}  </h5>
+                <h5 class="card-title text-center text-info"> {{pet.name}}  </h5>
                 <h6 class="text-success card-title text-center"> {% if pet.available %} ✔️ Available Now!{% endif %}</h6>
 
 
@@ -26,10 +26,10 @@
 
                     <div id="icon_holder" class="col-6 test round">
                         <div class="row justify-content-center">
-                            <i id="{{pet.id}}" class="species-icon fa-solid fa-shield-cat m-2 options-icons pt-2 pb-2" style="color: darkmagenta;"></i>
+                            <i id="{{pet.id}}" title="Edit {{pet.name}}'s profile"class="species-icon fa-solid fa-shield-cat m-2 options-icons pt-2 pb-2" style="color: darkmagenta;"></i>
                             <i class="notes-icon fa-solid fa-clipboard m-2 options-icons pt-2 pb-2 " style="color: #e029c8;"></i>
                             <i class="bday-icon fa-solid fa-cake-candles m-2 options-icons pt-2 pb-2" style="color: darkmagenta;"></i>
-                            <i class="edit-icon fa-solid fa-pen-to-square m-2 options-icons pt-2 pb-2" style="color: #e029c8;"></i>
+                            <i title="Add a new pet"class="edit-icon fa-solid fa-circle-plus m-2 options-icons pt-2 pb-2" style="color: #e029c8;"></i>
 
                         </div>
 
@@ -43,7 +43,7 @@
             </div>
 
             <div class="row justify-content-center ">
-                <a href="/pets/{{pet.id}}" class=" btn btn-primary shadow mt-2 rounded">Go to {{pet.name}}'s profile!</a>
+                <a href="/pets/{{pet.id}}" class=" btn btn-primary shadow  rounded mt-3">Go to {{pet.name}}'s profile!</a>
             </div>
 
         </div>
